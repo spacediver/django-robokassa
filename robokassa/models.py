@@ -1,6 +1,7 @@
 #coding: utf-8
 from django.db import models
 
+
 class SuccessNotification(models.Model):
     InvId = models.IntegerField(u'Номер заказа', db_index=True)
     OutSum = models.CharField(u'Сумма', max_length=15)
@@ -10,6 +11,7 @@ class SuccessNotification(models.Model):
     class Meta:
         verbose_name = u'Уведомление об успешном платеже'
         verbose_name_plural = u'Уведомления об успешных платежах (ROBOKASSA)'
+        app_label = u'robokassa'
 
     def __unicode__(self):
         return u'#%d: %s (%s)' % (self.InvId, self.OutSum, self.created_at)

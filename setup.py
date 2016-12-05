@@ -18,7 +18,7 @@ setup(
     description = u'Приложение для интеграции платежной системы ROBOKASSA в проекты на Django.'.encode('utf8'),
     long_description = open('README.rst').read().decode('utf8') + u"\n\n" + open('CHANGES.rst').read().decode('utf8'),
 
-    requires=['django (>= 1.3)'],
+    requires=['django (>= 1.8)'],
 
     classifiers=(
         'Development Status :: 4 - Beta',
