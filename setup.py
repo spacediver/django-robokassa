@@ -1,9 +1,10 @@
 #!/usr/bin/env python
 #coding: utf-8
 from setuptools import setup
+from imp import reload
 
 import sys
-reload(sys).setdefaultencoding("UTF-8")
+# reload(sys).setdefaultencoding("UTF-8")
 
 setup(
     name='django-robokassa',
@@ -16,7 +17,7 @@ setup(
     url='https://bitbucket.org/kmike/django-robokassa/',
     license = 'MIT license',
     description = u'Приложение для интеграции платежной системы ROBOKASSA в проекты на Django.'.encode('utf8'),
-    long_description = open('README.rst').read().decode('utf8') + u"\n\n" + open('CHANGES.rst').read().decode('utf8'),
+    long_description = open('README.rst').read() + u"\n\n" + open('CHANGES.rst').read(),
 
     requires=['django (>= 1.8)'],
 
